@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebe Responsive Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!----Font Awesome CDN---->
+    <link rel ="stylesheest" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+</head>
+<body>
+    <!---- Top navbar initial hidden will displayed for small screen (Mobile)---->
+    <div class="topnav">
+        <div class="logo">
+            <h2>Jaemar Bebe</h2>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+        <div class="menu-icon">
+            <i class="fa fa-bars"></i>
+        </div>
+
+        <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">What I do</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="header">
+        <div class="wrapper">
+            <div class="sidebar">
+                <div class="profile">
+                    <img src="image/src/profile.jpg" alt="">
+                    <h2>Jaemar Bebe</h2>
+                </div>
+                <ul class="nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">What I do</a></li>
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="hero-content">
+                <h4>Welcome</h4>
+                <h1>I'm <span class="input">Jaemar Bebe</span></h1>
+                <h4>Based in Santa Rosa, Laguna</h4>
+                <a href="#" class="btn">Hire Me</a>
+            </div>
+        </div>
+
+        <!---- applying typing effect for the title content ---->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.0/typed.min.js"></script>
+        <script>
+            var typed=new Typed(".input", {
+                strings:["Jaemar Bebe", "UX Designer", "Web Developer"],
+                typeSpeed:65,
+                backspeed:55,
+                loop:true
+            })
+            /***displaying topnavbar on small screen size***/
+
+            let menuicon=document.querySelector(".menu-icon");
+            let navbar=document.querySelector(".navbar");
+            let icon=document.querySelector(".menu-icon i");
+
+            menuicon.addEventListener("click", function(){
+                navbar.classList.toggle("open");
+                if(icon.classList.contains("fa fa-bars")){
+                    icon.classList.remove("fa fa-bars");
+                    icon.classList.add("fa-xmark");
+                }
+                else{
+                    icon.classList.remove("fa-xmark");
+                    icon.classList.add("fa fa-bars");
+                }
+            })
+        </script>
+    </div>
+</body>
+</html>
